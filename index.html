@@ -33,11 +33,12 @@
                     <li class="pure-menu-item"><a href="#" class="pure-menu-link">Gijon <span class="email-count">(16)</span></a></li>
                     <li class="pure-menu-item"><a href="#" class="pure-menu-link">Langredo <span class="email-count">(8)</span></a></li>
                     <li class="pure-menu-heading">Opciones</li>
-                    <li class="pure-menu-item"><a href="#" class="pure-menu-link"><span class="email-label-personal"></span>Bancos</a></li>
-                    <li class="pure-menu-item"><a href="#" class="pure-menu-link"><span class="email-label-travel"></span>Autobus</a></li>
-                    <li class="pure-menu-item"><label for="terms" class="pure-checkbox">
-                            
-                        <a href="#" class="pure-menu-link"><span class="email-label-travel"><input id="terms" type="checkbox"></span>Autobus</a>
+                    <li class="pure-menu-item">
+                        <label for="terms" class="pure-checkbox"><a href="#" class="pure-menu-link"><span class="email-label-personal"><input id="terms" type="checkbox" onclick="addBanks();"></span>Bancos</a>
+                        </label>
+                    </li>
+                    <li class="pure-menu-item">
+                        <label for="terms" class="pure-checkbox"><a href="#" class="pure-menu-link"><span class="email-label-travel"><input id="terms" type="checkbox"></span>Autobus</a>
                         </label>
                     </li>   
                 </ul>
@@ -107,31 +108,28 @@
         <div class="email-content">
             <div class="email-content-header pure-g">
                 <div class="pure-u-1-2">
-                    <h1 class="email-content-title">Hello from Oviedo</h1>
-                    <p class="email-content-subtitle">
-                        From <a>Elwin Huaman</a> at <span>3:56pm, September 18, 2015</span>
-                    </p>
+                    <h1 class="email-content-title">Hello from Oviedo</h1>                    
                 </div>
 
                 <div class="email-content-controls pure-u-1-2">
-                    <button class="secondary-button pure-button">Como llegar a la tienda</button>
+                    <input class="pure-button pure-button-primary" onclick="showShops();" type=button value="showShops"/>
                 </div>
             </div>
 
             <div class="email-content-body">
-                <div id="mainMap">
-                    <p>El Mapa principal</p>
-                </div>
                 <div class="email-content-controls pure-u-2-2">
                     <form class="pure-form">
                         <fieldset>
-                            <legend>Registrar una tienda con ofertas</legend>
-                            <input type="text" placeholder="Name of the shop">
-                            <input type="password" placeholder="Description of the shop">
-                            <button type="submit" class="pure-button pure-button-primary">Publicar</button>
+                            <input type="text" id="name" placeholder="Name of the shop">
+                            <input type="text" id="description" placeholder="Description of the shop">
+                            <input class="pure-button pure-button-primary" onclick="addShop();" type=button value="Publicar"/>
                         </fieldset>
                     </form>
                 </div>
+                <div id="mainMap">
+                    <p>El Mapa principal</p>
+                </div>
+                
             </div>
         </div>
     </div>
