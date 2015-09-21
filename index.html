@@ -1,10 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="A layout example that shows off a responsive email layout.">
-    <title>Email &ndash; Layout Examples &ndash; Pure</title>
+    <title>CheapLocator </title>
 <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 <link rel="stylesheet" type="text/css" href="css/motor.css">
     <!--[if lte IE 8]>
@@ -13,6 +13,9 @@
     <!--[if gt IE 8]><!-->
         <link rel="stylesheet" href="css/layouts/email.css">
     <!--<![endif]-->
+    <!--
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdbWLJL8jrwiQ9bnrgB0KIBFq1_zlX7g4&callback=initMap">
+    -->
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&libraries=geometry"></script>
 <script type="text/javascript" src="js/motor.js"></script>
 </head>
@@ -25,33 +28,18 @@
             <button class="primary-button pure-button">Buscar</button>
 
             <div class="pure-menu">
-                <form class="pure-form pure-form-stacked">
-                    <fieldset>
-                        <legend>Legend</legend>
-
-                        <div class="pure-u-1 pure-u-md-1-2">
-                            <select id="state" class="pure-input-1-2">
-                                <option>AL</option>
-                                <option>CA</option>
-                                <option>IL</option>
-                            </select>
-                        </div>
-                    </fieldset>
-                </form>
                 <ul class="pure-menu-list">
-                    <li>
-                        <div class="pure-u-1">
-                            <select id="state" class="pure-input-2-2">
-                                <option>Gijon</option>
-                                <option>Asturias</option>
-                                <option>IL</option>
-                            </select>
-                        </div>
-                    </li>
-                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Tienda <span class="email-count">(2)</span></a></li>
-                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Ciudad <span class="email-count">(6)</span></a></li>
+                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Oviedo <span class="email-count">(12)</span></a></li>
+                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Gijon <span class="email-count">(16)</span></a></li>
+                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Langredo <span class="email-count">(8)</span></a></li>
                     <li class="pure-menu-heading">Opciones</li>
                     <li class="pure-menu-item"><a href="#" class="pure-menu-link"><span class="email-label-personal"></span>Bancos</a></li>
+                    <li class="pure-menu-item"><a href="#" class="pure-menu-link"><span class="email-label-travel"></span>Autobus</a></li>
+                    <li class="pure-menu-item"><label for="terms" class="pure-checkbox">
+                            
+                        <a href="#" class="pure-menu-link"><span class="email-label-travel"><input id="terms" type="checkbox"></span>Autobus</a>
+                        </label>
+                    </li>   
                 </ul>
             </div>
         </div>
@@ -126,9 +114,7 @@
                 </div>
 
                 <div class="email-content-controls pure-u-1-2">
-                    <button class="secondary-button pure-button">Reply</button>
-                    <button class="secondary-button pure-button">Forward</button>
-                    <button class="secondary-button pure-button">Move to</button>
+                    <button class="secondary-button pure-button">Como llegar a la tienda</button>
                 </div>
             </div>
 
@@ -152,7 +138,6 @@
 </div>
 
 <script src="http://yui.yahooapis.com/3.17.2/build/yui/yui-min.js"></script>
-
 <script>
     YUI().use('node-base', 'node-event-delegate', function (Y) {
 
@@ -168,11 +153,5 @@
 
     });
 </script>
-
-
-
-
-
-
 </body>
 </html>
